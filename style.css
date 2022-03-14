@@ -8,6 +8,9 @@ h1,h2,h3,h4,h5{
     text-align: center;
     color: crimson;
 }
+p{
+    font-size: 20px;
+}
 div.header{
     margin-top: 10px;
 
@@ -45,6 +48,7 @@ div.question{
 }
 div.question div{
     margin-top: 10px;
+    font-size: 20px;
 }
 
 
