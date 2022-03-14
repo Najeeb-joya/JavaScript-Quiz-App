@@ -1,12 +1,25 @@
 
+
 let form = document.querySelector('.qform');
-
-
-const answers = ['Tehran','Kabul','Pakistan',32,'Hyper Text Markup Language'];
-
-
-form.addEventListener('submit', e =>{
+let resulttitle = document.querySelector('.result-title1');
+const answers = ['Tehran','Kabul','Pakistan',50,'Hyper Text Markup Language'];
+ form.addEventListener('submit',e =>{
     e.preventDefault();
-    console.log("Form Submited");
+    let selected = document.querySelectorAll('input[type="radio"]:checked');
+    selected.forEach(value =>{
+            let result = " ";
+            result += value.parentElement.textContent; 
 
-});
+            resulttitle.textContent += result + " ";
+            
+
+
+    });
+
+ });
+
+
+
+
+
+
