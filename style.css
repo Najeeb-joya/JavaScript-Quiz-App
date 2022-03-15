@@ -7,13 +7,15 @@ body{
 .error{
     text-align: center;
     padding-top: 30px;
+    font-size: 25px;
     color: red;
     font-weight: bolder;
 }
-
 .success{
     color: green;
     padding-top: 30px;
+    font-size: 35px;
+    font-family: sans-serif;
     text-align: center;
     font-weight: bolder;
 }
@@ -26,12 +28,12 @@ h1{
     color: black;
     padding-top: 30px;
     text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
 }
-
 span{
     font-size: 40px;
-    font-weight: bold;
-    
+    font-weight: bold;  
 }
 span.spnresult{
     margin-left: 58px;
@@ -53,13 +55,11 @@ div.result{
  border-radius: 10px;
  padding: 20px;
 }
-
 div.questions{
 width: 90%;
 padding: 20px;
 margin:20px auto ;
 }
-
 div.question{
    background-color: whitesmoke;
    border-radius: 20px;
@@ -75,7 +75,6 @@ div.question{
     display: block;
     padding: 5px;
     font-family: 'Times New Roman', Times, serif;
-
 }
 div.question div{
     margin-top: 10px;
