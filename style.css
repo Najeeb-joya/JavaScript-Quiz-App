@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color:lightgreen;
-    background: linear-gradient(150deg, #71b7e6 , #9b59b6);
+    background: linear-gradient(150deg, #71b7e6 , #d0b2db);
 }
 .error{
     text-align: center;
