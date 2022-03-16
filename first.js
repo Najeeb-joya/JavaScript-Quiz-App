@@ -23,16 +23,7 @@ const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
                                 
                         }
         });
-        if(counter > 2){
-        title.setAttribute('class','success');
-        title.textContent = "Congrats! You Compeleted the Test & Below is Your Result "
-        resulttitle.textContent = "You Scored " + counter + "%"
-        }else{
-                title.setAttribute('class','error');
-                title.textContent = "Oops! You Faild Try Agrain"
-                resulttitle.textContent = "You Scored " + counter + "%"
-        }
-
+        
         window.scroll({
                 top: 0, 
                 left: 0, 
@@ -40,11 +31,41 @@ const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
         });
 
 
+        // if(counter > 2){
+        // title.setAttribute('class','success');
+        // title.textContent = "Congrats! You Compeleted the Test & Below is Your Result "
+        // resulttitle.textContent = "You Scored " + counter + "%"
+        // }else{
+        //         title.setAttribute('class','error');
+        //         title.textContent = "Oops! You Faild Try Agrain"
+        //         resulttitle.textContent = "You Scored " + counter + "%"
+        // }
+
+
+
+
+        let score = 1; 
+        const intr = setInterval(() => {
+               if(score === counter){
+                       clearInterval(intr);
+               }else{
+                score++;
+                title.setAttribute('class','success');
+                title.textContent = "Congrats! You Compeleted the Test & Below is Your Result "
+                resulttitle.textContent = "You Scored " + score + "%"
+                        
+               }
+               console.log(score);
+       },5);
+
       
+
+        
 
 
  });
 
+   
 
 
 
