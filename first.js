@@ -10,18 +10,15 @@ const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
    e.preventDefault();
     
     let selected = document.querySelectorAll('input[type="radio"]:checked');
-    console.log(selected);
 
         let counter = 0; 
         selected.forEach((value, index) =>{
 
-                        if(answers[index] === value.value){
-
-                                counter +=20; 
-                        }else{
-                                counter = counter;
-                                
-                        }
+                if(answers[index] === value.value){
+                  counter +=20; 
+                }else{
+                  counter = counter;               
+                }
         });
         
         window.scroll({
@@ -29,45 +26,30 @@ const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
                 left: 0, 
                 behavior: 'smooth'
         });
-       
-
-        // if(counter > 2){
-        // title.setAttribute('class','success');
-        // title.textContent = "Congrats! You Compeleted the Test & Below is Your Result "
-        // resulttitle.textContent = "You Scored " + counter + "%"
-        // }else{
-        //         title.setAttribute('class','error');
-        //         title.textContent = "Oops! You Faild Try Agrain"
-        //         resulttitle.textContent = "You Scored " + counter + "%"
-        // }
 
         let score = 1; 
+        
         const intr = setInterval(() => {
                if(score === counter){
                        clearInterval(intr);
                }else{
                 score++;
                 title.textContent = "Counting Your Scores";
-                if(score >= 55){
-                       
-                        title.setAttribute('class','success');
-                        title.textContent = "Congrats! You Compeleted the Test & Below is Your Result ";
-                        resulttitle.textContent = "You Scored " + score + "%";
-                }else{
-                        title.setAttribute('class','error');
-                        title.textContent = "Oops! You Faild Try Agrain";
-                        resulttitle.textContent = "You Scored " + score + "%"
-
-
-                }
-                
-                        
+                resulttitle.textContent = "You Scored " + score + "%";
                }
-       },80);
-
+       },30);
       
-
-        
+       console.log(counter);
+       if(counter >= 55){ 
+                title.setAttribute('class','success');
+                title.textContent = "Congrats! You Compeleted the Test & Below is Your Result ";
+                resulttitle.textContent = "You Scored " + counter + "%";
+                console.log("Something for Test");
+        }else{
+                title.setAttribute('class','error');
+                title.textContent = "Oops! You Faild Try Agrain";
+                resulttitle.textContent = "You Scored " + counter + "%";
+        }
 
 
  });
