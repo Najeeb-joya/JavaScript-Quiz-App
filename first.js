@@ -29,7 +29,7 @@ const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
                 left: 0, 
                 behavior: 'smooth'
         });
-
+       
 
         // if(counter > 2){
         // title.setAttribute('class','success');
@@ -41,22 +41,29 @@ const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
         //         resulttitle.textContent = "You Scored " + counter + "%"
         // }
 
-
-
-
         let score = 1; 
         const intr = setInterval(() => {
                if(score === counter){
                        clearInterval(intr);
                }else{
                 score++;
-                title.setAttribute('class','success');
-                title.textContent = "Congrats! You Compeleted the Test & Below is Your Result "
-                resulttitle.textContent = "You Scored " + score + "%"
+                title.textContent = "Counting Your Scores";
+                if(score >= 55){
+                       
+                        title.setAttribute('class','success');
+                        title.textContent = "Congrats! You Compeleted the Test & Below is Your Result ";
+                        resulttitle.textContent = "You Scored " + score + "%";
+                }else{
+                        title.setAttribute('class','error');
+                        title.textContent = "Oops! You Faild Try Agrain";
+                        resulttitle.textContent = "You Scored " + score + "%"
+
+
+                }
+                
                         
                }
-               console.log(score);
-       },5);
+       },80);
 
       
 
