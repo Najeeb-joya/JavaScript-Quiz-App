@@ -1,19 +1,15 @@
-
-
 let form = document.querySelector('.qform');
 let title = document.querySelector('.result-title');
 let resulttitle = document.querySelector('.result-title1');
-let reset = document.querySelector('.reset');
 const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
-let counter = 0; 
 
+let counter = 0; 
 
  form.addEventListener('submit',e =>{
    e.preventDefault();
-    
-    let selected = document.querySelectorAll('input[type="radio"]:checked');
 
-        
+   let selected = document.querySelectorAll('input[type="radio"]:checked');
+    
         selected.forEach((value, index) =>{
 
                 if(answers[index] === value.value){
@@ -34,8 +30,6 @@ let counter = 0;
         }
        },25);
 
-
-
        window.scroll({
         top: 0, 
         left: 0, 
@@ -43,10 +37,10 @@ let counter = 0;
 });   
         
   });
- 
 
 
+  reset.addEventListener('click', e =>{
+         document.querySelector('.reset').reset();
 
-
-
-
+       
+  })
