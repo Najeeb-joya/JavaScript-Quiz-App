@@ -26,7 +26,7 @@ let counter = 0;
                }else{
                         score++;
                         title.textContent = "You've Completed the test and below is your result";
-                        resulttitle.textContent= "You got " + score + "%";   
+                        resulttitle.textContent= "You got " + counter + "%";   
         }
        },25);
 
