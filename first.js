@@ -2,7 +2,7 @@ let form = document.querySelector('.qform');
 let title = document.querySelector('.result-title');
 let resulttitle = document.querySelector('.result-title1');
 const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
-
+let reset = document.querySelector('.reset');
 let counter = 0; 
 
  form.addEventListener('submit',e =>{
@@ -40,7 +40,10 @@ let counter = 0;
 
 
   reset.addEventListener('click', e =>{
-         document.querySelector('.reset').reset();
 
-       
+        window.onbeforeunload = function () {   
+                window.scrollTo(0, 0);
+              }
+
+        document.location.reload(true); 
   })
