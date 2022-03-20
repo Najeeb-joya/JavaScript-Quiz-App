@@ -22,24 +22,16 @@ let counter = 0;
                 }
         });
         
-
         let score = 1; 
-        let flag="test"
         const intr = setInterval(() => {
-                title.textContent = "Counting Your Score... ";
                if(score === counter){
                        clearInterval(intr);
                }else{
-                score++;
-                if(score >= 60){
-                        flag ="passed"
-                        resulttitle.textContent= score + "%"; 
-                }else{
-                        flag="failed"
-                }
+                        score++;
+                        title.textContent = "You've Completed the test and below is your result";
+                        resulttitle.textContent= "You got " + score + "%";   
         }
-       },30);
-       console.log(flag);
+       },25);
 
 
 
@@ -52,19 +44,6 @@ let counter = 0;
   });
  
 
-   
-
-
-//  if(score >= 55){ 
-//         title.setAttribute('class','success');
-//         title.textContent = "Congrats! You Compeleted the Test & Below is Your Result ";
-//          resulttitle.textContent = "You Scored " + score + "%";
-// }else{
-//         title.setAttribute('class','error');
-//         title.textContent = "Oops! You Faild Try Agrain";
-//          resulttitle.textContent = "You Scored " + score + "%";
-
-// }
 
 
 
