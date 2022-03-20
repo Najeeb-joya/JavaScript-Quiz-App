@@ -3,6 +3,7 @@
 let form = document.querySelector('.qform');
 let title = document.querySelector('.result-title');
 let resulttitle = document.querySelector('.result-title1');
+let reset = document.querySelector('.reset');
 const answers = ['tehran','kabul','pakistan',"50",'hyper text markup language'];
 let counter = 0; 
 

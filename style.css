@@ -65,14 +65,19 @@ div.question{
    padding: 10px;
    padding-left: 30px;
 }
+div.buttons{
+    text-align: center;
+}
 .submit{
-    margin:20px auto;
+    margin:20px 15px;
     font-size: 20px;
     font-weight: bolder;
     border-radius: 10px;
-    display: block;
+    display: inline-block;
     padding: 5px;
     font-family: 'Times New Roman', Times, serif;
+    
+    
 }
 div.question div{
     margin-top: 10px;
