@@ -21,14 +21,14 @@ let counter = 0;
         
         let score = 1; 
         const intr = setInterval(() => {
-               if(score === counter){
+               if(score === counter || counter === 0){
                        clearInterval(intr);
                }else{
                         score++;
                         title.textContent = "You've Completed the test and below is your result";
-                        resulttitle.textContent= "You got " + counter + "%";   
+                        resulttitle.textContent= "You got " + score + "%";   
         }
-       },25);
+       },20);
 
        window.scroll({
         top: 0, 
